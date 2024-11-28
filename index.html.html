@@ -1,0 +1,277 @@
+ 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Archivo de estilos CSS -->
+    <style>
+        :root {
+            --primary-color: #6200EE; /* Color primario */
+            --on-primary-color: #FFFFFF; /* Color para texto en elementos primarios */
+            --surface-color: #FFFFFF; /* Color de superficie */
+            --on-surface-color: #000000; /* Color para texto en superficie */
+            --error-color: #B00020; /* Color de error */
+            --font-family: 'Roboto', sans-serif; /* Tipografía */
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--surface-color);
+            color: var(--on-surface-color);
+        }
+        header {
+            position: relative;
+            height: 100vh;
+            background: url('tu-imagen-de-fondo.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--on-primary-color);
+            text-align: center;
+            padding: 20px;
+            background-color: #75c6d7;
+        }
+        header img {
+            
+            width: 1200px; /* Cambia según tu logo */
+            border-radius: 0%; /* Esquinas redondeadas para logo */
+        }
+        nav {
+            
+            display: flex;
+        }
+        nav a {
+            color: var(--on-primary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        #cookie-warning {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--on-primary-color);
+            text-align: center;
+            padding: 10px;
+            display: none; /* Oculto por defecto, se mostrará con JavaScript */
+        }
+        .bio-card {
+            background: var(--surface-color);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .social-icons img {
+            width: 40px; /* Tamaño de los iconos */
+            margin: 0 8px;
+            transition: filter 0.3s;
+        }
+        .social-icons img:hover {
+            filter: brightness(1.2);
+        }
+
+       
+        .project {
+            width: calc(33.333% - 20px);
+            margin: 10px;
+            text-align: center;
+            background: var(--surface-color);
+            border-radius: 16px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        footer {
+            background: var(--primary-color);
+            color: var(--on-primary-color);
+            text-align: center;
+            padding: 10px 0;
+        }
+        .skill {
+            margin: 20px 0;
+        }
+        .progress {
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+            margin-top: 5px;
+        }
+        .progress-bar {
+            height: 100%;
+            background: var(--primary-color);
+            transition: width 0.5s;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form button {
+            background: var(--primary-color);
+            border: none;
+            color: var(--on-primary-color);
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: #3700B3; /* Color más oscuro para hover */
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .project {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .project {
+                width: 100%;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#about">Sobre Mí</a>
+            <a href="#projects">Galería de Proyectos</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#contact">Contacto</a>
+        </nav> 
+        <img src="Portafolio de Juan Emilio Romero.png" alt="Logo">
+
+    </header>
+
+    <div id="cookie-warning">Este sitio utiliza cookies. <button id="accept-cookies">Aceptar</button></div>
+
+    <section id="about">
+        <div class="bio-card">
+            <h2>Sobre Mí</h2>
+            <p>Una breve biografía sobre ti. ¿Quién eres? ¿Qué has estudiado? ¿Dónde has trabajado?</p>
+            <p>Mi nombre es Juan Emilio Romero y soy estudiante de Grupo Sorolla Valencia desde el año 2022, 
+            he estudiado Smr - Sistemas microinformáticos y redes - y actualmente estoy estudiando ASIR y trabaje de prácticas más de 3 meses en una tienda taller llamada Orbis Informática.</p>
+            <p></p>
+            <div class="social-icons">
+                <a href="https://es-es.facebook.com/"><img src="icono facebook.jpg" alt="Facebook"></a>
+                <a href="https://x.com/"><img src="icono twitter.png" alt="Twitter"></a>
+                <a href="https://es.linkedin.com/"><img src="icono linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Galería de Proyectos</h2>
+        <div class="project">
+            <img src="Inteligencia Artificial en los Procesadores.jpg.png" alt="Proyecto 1" style="max-width: 100%; border-radius: 16px;">
+            <h3>Proyecto de Inteligencia Artificial en los Procesadores</h3>
+            <p>Este Proyecto Consiste en explicar la historia de la Inteligencia artificial y de su creador Alan Turing y como se ha utilizado actualmente este Proyecto se hizo con la colaboración de Jesús David Manzanero</p>
+        </div>
+        <div class="project">
+            <img src="Proyecto Montar ordenador.jpg.png" alt="Proyecto 2" style="max-width: 100%; border-radius: 16px;">
+            <h3>Proyecto de Montar el mejor Ordenador gaming</h3>
+            <p>Esto proyecto consiste en crear el mejor PC Gamer del momento 
+                usando los mejores componentes y teniendo un presupuesto de 5.000€ este Proyecto se hizo con la colaboración de Jesús David Manzanero</p>
+        </div>
+        <div class="project">
+            <img src="Implantación de sistemas operativos.png" alt="Implantación de sistemas operativos" style="max-width: 100%; border-radius: 16px;">
+            <h3>Proyecto Implantación de sistemas operativos</h3>
+            <p>Este Proyecto consiste en hacer el presupuesto de tres tipos de ordenadores que son PC Gamer, PC para programar y un servidor además de incluir sus componentes y comparando varios sistemas operativos para saber cual es el más indicado para el tipo de PC
+            </p>
+        </div>
+        <div class="project">
+            <img src="Proyecto de Construcción una Red Basada en los modelos OSI y TCP-IP.png" alt="Proyecto 4" style="max-width: 100%; border-radius: 16px;">
+            <h3>Proyecto Construcción y simulación de una Red Basada en los Modelos Osi y TCP/IP</h3>
+            <p>Este Proyecto consiste montar una red en la que se conecten dos routers y se puedan mandar paquetes a servidores y ordenadores en cisco Packet tracer 
+            </p>
+        </div>
+        <div class="project">
+            <img src="Proyecto de Documentacion De sistemas operativos.png" alt="Proyecto 5" style="max-width: 100%; border-radius: 16px;">
+            <h3>Proyecto de Inteligencia Artificial en los Procesadores </h3>
+            <p>Este Proyecto consiste en hacer documentación de cada práctica de ISO explicando paso a paso como hacerlo además de incluir fotos.</p>
+        </div>
+        <div class="project">
+            <img src= "Proyecto web HTML + CSS Avanzado.png" alt="Proyecto 6" style="max-width: 100%; border-radius: 16px;">
+            <h3>Proyecto Web HTML + CSS Avanzado</h3>
+            <p>Este Proyecto consiste en hacer una página web de 4 paginas de cualquier tema a elegir en mi caso hice una de la evolución de una de mis sagas favoritas de videojuegos Inazuma Eleven </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Habilidades y Conocimientos</h2>
+        <div class="skill">
+            <h3>HTML</h3>
+            <p>Descripción breve de HTML.</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 80%;"></div> <!-- Cambia el porcentaje según tus habilidades -->
+            </div>
+        </div>
+        <div class="skill">
+            <h3>CSS</h3>
+            <p>Descripción breve de CSS.</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 70%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>JavaScript</h3>
+            <p>Descripción breve de JavaScript.</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 60%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>¿Quieres contratarme? ¡Hablemos!</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <br>
+    </section>
+
+    <footer>
+        <p>© 2024 Portafolio de Juan Emilio Romero</p>
+    </footer>
+
+    <script>
+        // Mostrar el aviso de cookies al cargar la página
+        window.onload = function() {
+            document.getElementById('cookie-warning').style.display = 'block';
+
+            setTimeout(function() {
+                document.getElementById('cookie-warning').style.display = 'none';
+            }, 5000); // Desaparece después de 5 segundos
+        };
+
+        // Ocultar el aviso de cookies al hacer clic en aceptar
+        document.getElementById('accept-cookies').onclick = function() {
+            document.getElementById('cookie-warning').style.display = 'none';
+        };
+    </script>
+</body>
+</html>
